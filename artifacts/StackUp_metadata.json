@@ -1,0 +1,199 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "campaigns",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "campaignId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nextQuestId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "campaignId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "title_",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "reward_",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numberOfRewards_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startTime_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endTime_",
+						"type": "uint256"
+					}
+				],
+				"name": "createQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "campaignId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "joinQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextCampaignId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "playerQuestStatuses",
+				"outputs": [
+					{
+						"internalType": "enum StackUp.PlayerQuestStatus",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "campaignId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "submitQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Stackup.sol": "StackUp"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Stackup.sol": {
+			"keccak256": "0x560e4710eacf88bd63f9aeaa8f77e89c88d20678065e5ac1fa83aa74160f0a91",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://22147bf9d2ea32c4c75a9cfa1b43e9d608ce44017b0a53144a0d1e5e5c593d2d",
+				"dweb:/ipfs/QmaibeAKtWVPeJ7w7BTY5DC4niUrz2VGprpyiWGEraFDYu"
+			]
+		}
+	},
+	"version": 1
+}
