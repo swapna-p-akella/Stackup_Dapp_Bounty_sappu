@@ -1,28 +1,11 @@
-REMIX DEFAULT WORKSPACE
+The two features added to the smart contract are Campaigns and Quest start and end times. These features provide enhanced functionality to manage multiple quests and restrict players from joining quests that have already ended.
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+The Campaigns feature allows the contract to organize quests under different campaigns. Each campaign can have its own set of quests. This enables better categorization and organization of quests.
 
-This workspace contains 3 directories:
+The Quest start and end times feature adds time restrictions to each quest. Players can only join a quest if the current timestamp falls within the quest's start and end times.
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+This prevents players from joining quests that have already ended or haven't started yet. It ensures that quests are only active during specific time intervals, maintaining fairness and time-bound participation.
 
-SCRIPTS
+The modifications in the code introduce new data structures, such as the Campaign struct, and modify the existing Quest struct to include start and end time fields. The createQuest function is updated to assign start and end times to quests within campaigns. 
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
-
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
-
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
-
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
-
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+The joinQuest function checks if a quest is currently active before allowing players to join. The submitQuest function remains the same. Overall, these features enhance the contract's capabilities, enabling the management of campaigns and time-bound quests.
